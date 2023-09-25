@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" size="10" id="value" placeholder="Nhập số">
+<button type="submit" id="btnSubmit">In</button>
+<div class="text_print" id="print"></div>
+
+<script>
+
+    var submitBtn = document.getElementById('btnSubmit')
+    submitBtn.addEventListener('click', printToN)
+
+    function printToN() {
+        let valueInp = document.getElementById('value').value;
+        let printArea = document.getElementById('print')
+        printArea.innerText = "";
+            for (let i = 1; i <= valueInp; i++) {
+                printArea.innerHTML += i + " ";
+            }
+
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="main">
+    <form method="post" action="https://www.google.com.vn">
+        <table align="center" class="reg" border="1" cellspacing="0" style="border-collapse: collapse">
+            <tr>
+                <td rowspan="3"><img width="200px" src="./imgs/hinh1.png" alt=""></td>
+                <td><label for="name">HỌ VÀ TÊN:</label></td>
+                <td colspan="2"><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="mssv">MÃ SỐ SINH VIÊN:</label></td>
+                <td colspan="2"><input type="text" id="mssv" name="mssv"></td>
+            </tr>
+            <tr>
+                <td><label for="date">NGÀY SINH</label></td>
+                <td><input type="date" name="date" id="date"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label>CHUYÊN NGÀNH: </label></td>
+                <td colspan="2">
+                    <input type="radio" name="major" id="CNPM"><label for="CNPM">CNPM</label>
+                    <input type="radio" name="major" id="HTTT"><label for="HTTT">HTTT</label>
+                    <input type="radio" name="major" id="ANM"><label for="ANM">AN NINH MẠNG</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">SỞ THÍCH:</td>
+                <td colspan="2" style="display: flex; flex-direction: column">
+                    <label>
+                        <input type="checkbox" name="VIET_CHUONG_TRINH" value="VIẾT CHƯƠNG TRÌNH"> VIẾT CHƯƠNG TRÌNH
+                    </label>
+                    <label>
+                        <input type="checkbox" name="PHAN_TICH_CSDL" value="PHÂN TÍCH CSDL"> PHÂN TÍCH CSDL
+                    </label>
+                    <label>
+                        <input type="checkbox" name="XAY_DUNG_SODOMANG" value="XÂY DỰNG SƠ ĐỒ MẠNG"> XÂY DỰNG SƠ ĐỒ MẠNG
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>MÀU SẮC YÊU THÍCH</td>
+                <td><input type="color" name="color" id="color"></td>
+                <td>HÌNH ĐẠI DIỆN:</td>
+                <td><input type="file" name="avt" id="avt"></td>
+            </tr>
+            <tr>
+                <td>TÊN ĐĂNG NHẬP WEB TRƯỜNG</td>
+                <td><input type="text" name="username" id="username"></td>
+                <td>MẬT KHẨU ĐĂNG NHẬP WEB TRƯỜNG</td>
+                <td><input type="password" name="pass" id="pass"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Gửi dữ liệu về máy chủ</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

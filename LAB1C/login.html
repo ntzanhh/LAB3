@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .login-frm {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        gap: 1rem;
+
+    }
+
+    .main {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .main form {
+        border-radius: 10px;
+        border: 1px #9b9b9b solid;
+        padding: 10px;
+        box-shadow: 0 0 4px ;
+    }
+
+    .login-frm div input[type=text], input[type=password] , .login-frm div button[type=submit] {
+        width: 300px;
+    }
+    .login-frm > div:not(.remember) {
+        display: flex;
+        flex-direction: column;
+
+    }
+</style>
+<body>
+<div class="main">
+    <form  method="post" action="https://www.google.com.vn/">
+        <div class="title"><h2>Thông tin đăng nhập sinh viên</h2></div>
+        <div class="login-frm">
+            <div><label for="MSSV">Mã số sinh viên: </label>
+                <input type="text" name="MSSV" id="MSSV"></div>
+            <div class="password">
+                <label for="pass">Mật khẩu:</label>
+                <input type="password" name="pass" id="pass">
+            </div>
+            <div class="remember">
+                <input type="checkbox" name="remember" id="remember"><span>Lưu thông tin đăng nhập</span>
+            </div>
+            <div class="btn">
+                <button style="width: 100px" type="submit">Đăng nhập</button>
+            </div>
+        </div>
+        <div class="bottom-para">
+            <p>Sử dụng thông tin đăng nhập do nhà trường cấp, nếu quên mật khẩu thì nhấn vào <a
+                    href="./repass.html">đây</a></p>
+        </div>
+    </form>
+</div>
+</body>
+</html>

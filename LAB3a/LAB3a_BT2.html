@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .div {
+        height: 70px;
+    }
+
+    .green {
+        background-color: green;
+
+    }
+
+    .red {
+        background-color: red;
+    }
+</style>
+<body>
+<button id="btn">Đổi màu</button>
+<p>Vị trí tính từ 1</p>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+</body>
+
+<script !src="">
+var btn = document.getElementById('btn');
+btn.addEventListener('click', () => {
+    var div = document.getElementsByClassName('div');
+    for (let i = 0; i < div.length; i++) {
+        if ((i + 1) % 2 == 0) {
+            div[i].classList.add('red')
+        } else {
+            div[i].classList.add('green')
+        }
+    }
+})
+</script>
+</html>

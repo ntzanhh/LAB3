@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button value="red">Do</button>
+<button value="blue">Xanh</button>
+</body>
+<script !src="">
+
+    const btn = document.querySelectorAll('button');
+    for (const btnElement of btn) {
+        btnElement.addEventListener('click',changColor);
+    }
+    function changColor(e) {
+        let a = e.target.value;
+        document.querySelectorAll("body")[0].style.backgroundColor = a;
+
+    }
+</script>
+</html>

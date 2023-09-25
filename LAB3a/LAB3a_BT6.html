@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .slider {
+        background-color: rebeccapurple;
+        height: 300px;
+        width: 100vw;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .slide-container {
+        display: flex;
+        width: 100%;
+        transition: all .5s;
+    }
+
+    .slide {
+        width: 100%;
+        height: 300px;
+        flex: 0 0 100%;
+        transition: all .5s;
+    }
+</style>
+<body>
+<div class="slider" id="slider">
+    <div class="slide-container">
+        <div class="slide" style="background-color: red">sda</div>
+        <div class="slide" style="background-color: green">asdasd</div>
+        <div class="slide" style="background-color: yellow">dasdas</div>
+    </div>
+</div>
+</body>
+<script !src="">
+    function createSlider(id) {
+        const slider = document.getElementById(id);
+        const slideContainer = slider.getElementsByClassName('slide-container')[0];
+        if (slideContainer === null) console.log('null')
+        const slideCollect = slider.getElementsByClassName('slide')
+        slideContainer.append(slideCollect[0].cloneNode(true));
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % (slideCollect.length);
+            console.log(index)
+            slideContainer.style.transform = `translateX(-${100 * index}%)`;
+
+            setTimeout(() => {
+                if (index == slideCollect.length - 1) {
+                    slideContainer.style.transition = 'a';
+
+                    setTimeout(()=> {
+                        slideContainer.style.transform = "translateX(0%)";
+                    },10)
+                    index++;
+                    setTimeout(()=> {
+                        slideContainer.style.transition = "";
+                    },20)
+
+                }
+            },500)
+
+        }, 2000)
+    }
+
+    createSlider('slider');
+</script>
+</html>
